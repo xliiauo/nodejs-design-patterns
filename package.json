@@ -1,0 +1,15 @@
+{
+  "name": "nodejs-design-patterns",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "xliiauo",
+  "license": "MIT",
+  "scripts": {
+    "build": "rm -rf out && yarn babel src -d out"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.19.1"
+  }
+}
