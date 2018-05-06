@@ -1,6 +1,16 @@
-import Logger from './singleton/Logger'
+import logger from './singleton/Logger'
+import { Singleton } from './singleton/Logger'
 
-const logger = new Logger();
-console.log(logger.getInstance().getName());
+// Singleton pattern for a shared logger - the nodejs way
+console.log(logger.name);
 
+logger.name = 'apple';
+console.log(logger.name);
 
+logger._name = null;
+logger.name = 'apple';
+console.log(logger.name);
+
+// Singleton pattern for a shared logger - the general way
+const logger2 = new Singleton();
+console.log(logger2.instance.name);
