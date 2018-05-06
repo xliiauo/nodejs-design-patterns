@@ -5,8 +5,7 @@
   "author": "xliiauo",
   "license": "MIT",
   "scripts": {
-    "build": "rm -rf out/* && babel src -d out",
-    "start": "node out"
+    "build": "rm -rf out/* && babel src -d out"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

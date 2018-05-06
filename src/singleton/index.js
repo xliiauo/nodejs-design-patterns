@@ -1,5 +1,5 @@
-import logger from './singleton/Logger'
-import { Singleton } from './singleton/Logger'
+import logger from './Logger'
+import { Singleton } from './Logger'
 
 // Singleton pattern for a shared logger - the nodejs way
 console.log(logger.name);
