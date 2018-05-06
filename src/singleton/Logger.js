@@ -1,21 +1,29 @@
 class Logger {
     constructor(name) {
-        this.name = name;
+        this._name = name;
     }
 
-    getName() {
-        return this.name;
+    get name() {
+        return this._name;
+    }
+
+    set name(val) {
+        if (!this._name) {
+            this._name = val;
+        }
     }
 }
 
-export default class Singleton {
+export class Singleton {
     constructor() {
         if (!Singleton.instance) {
-            Singleton.instance = new Logger('The singleton logger');
+            Singleton.instance = new Logger('The only logger');
         }
     }
 
-    getInstance() {
+    get instance() {
         return Singleton.instance;
     }
 }
+
+export default new Logger('The only logger');
